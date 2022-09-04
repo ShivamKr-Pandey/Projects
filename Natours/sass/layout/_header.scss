@@ -1,0 +1,42 @@
+/*******************Header Section Starts*****************/
+.header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.8) ,rgba($color-primary-dark, 0.8)), url("../img/hero.jpg");
+    background-size: cover;
+    background-position: top;
+    margin: 0 auto;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    &__container{
+        position: relative;
+    }
+
+    &__logo-box{
+        padding-top: 2rem;
+
+        & img{
+            max-width: 7rem;
+            width: 100%;
+            animation: fadeIn 1.5s ease-out;
+        }
+    }
+
+    &__content-wrapper{
+        text-align: center;
+        /* margin-top: 12%; */
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.container{
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/*******************Header Section Ends*****************/

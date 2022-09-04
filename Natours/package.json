@@ -1,0 +1,14 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing Page for my website",
+  "main": "index.js",
+  "scripts": {
+    "complie:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Shivam",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

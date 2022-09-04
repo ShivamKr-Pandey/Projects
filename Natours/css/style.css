@@ -1,203 +1,150 @@
-*,
-*::after,
-*::before{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-body{
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #777;
-} 
-
-html{
-    font-size: 62.5%;
-}
-
-
-/****************************************
-*                                       *
-*               Animations              *
-*                                       *
-****************************************/
-@keyframes fadeIn{
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
+/*****************************VARIABLES********************************/
+/*****************************VARIABLES********************************/
+/*****************************ANIMATIONS********************************/
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 @keyframes moveInLeft {
-    0%{
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    
-    80%{
-        transform: translateX(1rem);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInRight {
-    0%{
-        opacity: 0;
-        transform: translateX(10rem);
-    }
-    
-    80%{
-        transform: translateX(-1rem);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 @keyframes moveInBottom {
-    0%{
-        opacity: 0;
-        transform: translateY(4rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(4rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-    100%{
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-/****************************************
-*                                       *
-*               Animations              *
-*                                       *
-****************************************/
+/*****************************ANIMATIONS********************************/
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
 
+body {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
 
 /*******************Header Section Starts*****************/
-.header{
-    height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(to right bottom,rgba(126, 213, 111, 0.8) ,rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-    background-size: cover;
-    background-position: top;
-    margin: 0 auto;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-}
+.heading-primary {
+  color: #fff;
+  margin-bottom: 7%; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1.3s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.72rem;
+    animation: moveInRight 1.3s ease-out; }
 
-.container{
-    max-width: 1366px;
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-}
+/*******************Header Section Ends*****************/
+.btn:link, .btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.5rem 4.5rem;
+  border-radius: 10rem;
+  font-size: 1.6rem;
+  transition: all .2s;
+  position: relative; }
 
-.header__container{
-    position: relative;
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  .btn:hover::after {
+    transform: scaleX(1.2) scaleY(1.5);
+    opacity: 0; }
 
-}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.2); }
 
-.header__logo-box{
-    padding-top: 2rem;
-}
+.btn::after {
+  content: '';
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .5s; }
 
-.header__logo-box img{
-    max-width: 7rem;
-    width: 100%;
-    animation: fadeIn 1.5s ease-out;
-}
+.btn--white {
+  background-color: #fff;
+  color: #777;
+  font-weight: 600; }
+  .btn--white::after {
+    background-color: #fff; }
 
-.header__content-wrapper{
+.btn__animation {
+  animation: moveInBottom .5s ease-out .55s;
+  animation-fill-mode: backwards; }
+
+/*******************Header Section Starts*****************/
+.header {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  margin: 0 auto;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  .header__container {
+    position: relative; }
+  .header__logo-box {
+    padding-top: 2rem; }
+    .header__logo-box img {
+      max-width: 7rem;
+      width: 100%;
+      animation: fadeIn 1.5s ease-out; }
+  .header__content-wrapper {
     text-align: center;
     /* margin-top: 12%; */
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
+    transform: translate(-50%, -50%); }
 
-.heading-primary{
-    color: #fff;
-    margin-bottom: 7%;    
-}
-    
-.heading-primary--main{
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: moveInLeft 1.3s ease-out;
-}
+.container {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%; }
 
-.heading-primary--sub{
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.72rem;
-    animation: moveInRight 1.3s ease-out;
-}
-
-.header__btn{
-    animation: moveInBottom .5s ease-out .55s;
-    animation-fill-mode: backwards;
-}
-
-.btn:link,
-.btn:visited{
-    text-decoration: none;
-    display: inline-block;
-    padding: 1.5rem 4.5rem;
-    border-radius: 10rem;
-    font-size: 1.6rem;
-    transition: all .2s;
-    position: relative;
-}
-
-.btn:hover{
-    transform: translateY(-.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
-}
-
-.btn:active{
-    transform: translateY(0);
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
-}
-
-.btn--white{
-    background-color: #fff;
-    color: #777;
-    font-weight: 600;
-}
-
-.btn::after{
-    content: '';
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    border-radius: 10rem;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .5s;
-}
-
-.btn-white::after{
-    background-color: #fff;
-}
-
-.btn:hover::after{
-    transform: scaleX(1.2) scaleY(1.5);
-    opacity: 0;
-}
 /*******************Header Section Ends*****************/
