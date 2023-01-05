@@ -18,6 +18,11 @@ body{
         font-weight: 400;
         letter-spacing: 3.5rem;
         animation: moveInLeft 1.3s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
 
     &--sub{
@@ -26,12 +31,13 @@ body{
         font-weight: 700;
         letter-spacing: 1.72rem;
         animation: moveInRight 1.3s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            font-size: 1.5rem;
+        }
     }
 }
-
-
-
-/*******************Header Section Ends*****************/
 
 .heading-secondary{
     font-size: 3.5rem;
@@ -45,6 +51,14 @@ body{
     -webkit-background-clip: text;
     transition: all .2s;
 
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond (phone) {
+        font-size: 2.5rem;
+    }
+
     &:hover{
         transform: scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, 0.3) ;
@@ -55,7 +69,20 @@ body{
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include respond (phone) {
+        font-size: 1.4rem;
+    }
 }
+
+
+
+/*******************Header Section Ends*****************/
+
+
+/*******************Para typo Starts*****************/
+
+
 
 .paragraph{
     font-size: $default-font-size;
@@ -65,3 +92,16 @@ body{
         margin-bottom: 3rem;
     }
 }
+
+.story__caption{
+    text-align: center;
+    font-weight: 600;
+    color: $color-white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: $default-font-size;
+}
+
+
+/*******************Para typo Ends*****************/
+

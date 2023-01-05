@@ -13,4 +13,29 @@ body{
 
 html{
     font-size: 62.5%;
+
+    @include respond(big-desktop) {
+        font-size: 75%;   //12px
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%; //9px
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;   // 8px
+    }
+}
+
+
+.container{
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 2rem;
+
+    @include respond(tab-land) {
+        padding: 3rem;
+    }
 }

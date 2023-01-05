@@ -21,5 +21,13 @@
 
     &:hover{
         transform: translateY(-1.2rem) scale(1.1);
+
+        @include respond (tab-port) {
+            transform: translateY(0) scale(1.1) skewY(-6deg);
+        }
+    }
+
+    @include respond (tab-port) {
+        transform: skewY(-6deg);
     }
 }
