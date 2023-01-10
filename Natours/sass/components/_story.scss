@@ -4,10 +4,24 @@
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
     background-color: rgba($color-white, .5);
     border-radius: 8px;
-    padding: 6rem;
-    padding-left: 9rem;
+    padding: 6rem 6rem 6rem 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
+
+    @media (max-width: 75em) {
+        &__text p {
+            padding-left: 12rem;
+        }
+    }
+
+    @include respond (tab-port) {
+        width: 100%;
+        padding: 3rem 3rem 3rem 6rem;
+    }
+
+    @include respond (phone) {
+        
+    }
 
     &__shape{
         width: 15rem;
