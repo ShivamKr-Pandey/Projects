@@ -72,25 +72,25 @@ function Menu() {
     <div className="container">
       <h2>Menu</h2>
 
-      <div className="pizzas">
+      <ul className="pizzas">
         {pizzaData.map((pizza) => (
           <Pizza pizzaObj={pizza} key={pizza.name} />
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
 
 function Pizza(props) {
   return (
-    <div className="pizza">
+    <li className="pizza">
       <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
       <div>
         <h3>{props.pizzaObj.name}</h3>
         <p>{props.pizzaObj.ingredients}</p>
         <span>${props.pizzaObj.price}</span>
       </div>
-    </div>
+    </li>
   );
 }
 
@@ -101,10 +101,14 @@ function Footer() {
   const openHour = 12;
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
-  console.log(isOpen);
+
   return (
     <footer className="footer">
-      <p>{new Date().toLocaleTimeString()} We're currently open!</p>
+      {isOpen && (
+        <p>
+          We are open till {closeHour}.00. You can visit us or order online.{" "}
+        </p>
+      )}
     </footer>
   );
 }
